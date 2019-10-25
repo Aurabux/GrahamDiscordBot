@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* Made by Erika Fermin and Colin Pytlik
+ * to make fun of our friend Graham. 
+ * 10/25/2019*/
+
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -75,21 +80,6 @@ namespace DiscordBot.Modules
                                     "Stand in the ashes of a trillion dead souls, and asks the ghosts if honor matters. The silence is your answer.",
                                     "Bring me a bucket, and I'll show you a bucket!",
                                     "Smells vaguely of butts and death"};
-
-
-        [Command("Hi")]
-        public async Task Ping()
-        {
-            await ReplyAsync("Hello world!");
-        }
-        [Command("Hello")]
-        public async Task Hello()
-        {
-            var user = Context.Guild.GetUser(Context.User.Id).Nickname;
-
-            await ReplyAsync("Heyo " + user + "!");
-
-        }
 
         [Command("quote")]
         public async Task Quote()

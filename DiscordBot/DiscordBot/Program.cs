@@ -1,3 +1,7 @@
+/* Made by Erika Fermin and Colin Pytlik
+ * to make fun of our friend Graham. 
+ * 10/25/2019*/
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +33,7 @@ namespace DiscordBot
                 .AddSingleton(_commands)
                 .BuildServiceProvider();
 
-            String token = "NjM2NDUwODUyNTYyOTI3NjE2.XbNh1w.c7X6h2BTlFxezYfgXqJxyS0vFlM";
+            String token = "NjM2NDUwODUyNTYyOTI3NjE2.XbOCsw.7ngBL7CIFlsfPDNFV36U0gUCTMo";
 
             _client.Log += _client_Log;
 
