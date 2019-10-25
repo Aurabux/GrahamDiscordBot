@@ -29,7 +29,7 @@ namespace DiscordBot
                 .AddSingleton(_commands)
                 .BuildServiceProvider();
 
-            String token = "NjM2NDUwODUyNTYyOTI3NjE2.XbNIJA.a5kig8iHINnH9EWGuYFGoQry0Co";
+            String token = "NjM2NDUwODUyNTYyOTI3NjE2.XbNh1w.c7X6h2BTlFxezYfgXqJxyS0vFlM";
 
             _client.Log += _client_Log;
 
@@ -64,6 +64,19 @@ namespace DiscordBot
             {
                 var result = await _commands.ExecuteAsync(context, argPos, _services);
                 if (!result.IsSuccess) Console.WriteLine(result.Error);
+            }
+            
+            if(message.Content.ToLower().Contains("daddy"))
+            {
+                await message.DeleteAsync();
+
+                await context.Channel.SendFileAsync("C:/Users/Colin/Desktop/DiscordBot/GrahamDiscordBot/DiscordBot/Stop.gif", message.Author.Mention + " don't say '" + message + "'", false, null);
+
+            }
+
+            if (message.Content.ToLower().Contains("hello graham") || message.Content.ToLower().Contains("hi graham") || message.Content.ToLower().Contains("heyo graham"))
+            {
+                await context.Channel.SendMessageAsync("Heyo " + message.Author.Mention);
             }
 
         }
